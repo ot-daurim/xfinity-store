@@ -1,0 +1,14 @@
+CREATE TABLE categories (
+    id BIGSERIAL PRIMARY KEY,
+
+    name VARCHAR(120) NOT NULL,
+    slug VARCHAR(160) NOT NULL,
+    description VARCHAR(500),
+
+    active BOOLEAN NOT NULL DEFAULT TRUE,
+
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT uk_categories_slug UNIQUE (slug)
+);
