@@ -3,6 +3,7 @@ spring:
     url: ${DB_URL:jdbc:postgresql://localhost:5433/xfinity_store}
     username: ${DB_USERNAME:postgres}
     password: ${DB_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
 
   jpa:
     show-sql: true
